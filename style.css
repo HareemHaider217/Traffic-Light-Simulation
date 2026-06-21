@@ -1,0 +1,142 @@
+/* GLOBAL STYLES*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #1b1b1b;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* MAIN CONTAINER*/
+
+#simulation-container {
+    width: 1450px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* DASHBOARD*/
+
+#dashboard {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+
+    padding: 12px;
+
+    background: #2a2a2a;
+
+    border: 2px solid #444;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 0 15px rgba(0,0,0,0.5),
+        0 0 30px rgba(0,0,0,0.2);
+}
+
+/* STAT CARDS*/
+
+.stat-card {
+    flex: 1;
+
+    background: #333;
+
+    border-radius: 8px;
+
+    padding: 10px;
+
+    text-align: center;
+
+    transition: 0.3s;
+}
+
+.stat-card:hover {
+    background: #3c3c3c;
+}
+
+.stat-card h3 {
+    font-size: 14px;
+    margin-bottom: 6px;
+    color: white;
+}
+
+.stat-card p {
+    font-size: 26px;
+    font-weight: bold;
+    color: #00ff88;
+}
+
+/* Simulation Time Color */
+
+#simulationTime {
+    color: #ffcc00;
+}
+
+/* CANVAS*/
+
+#trafficCanvas {
+    height: min(700px, 72vh);
+    aspect-ratio: 1400 / 922;
+    width: auto;
+    max-width: 95vw;
+
+    border: 3px solid #666;
+
+    border-radius: 8px;
+
+    background: black;
+
+    box-shadow:
+        0 0 25px rgba(0,0,0,0.6),
+        0 0 50px rgba(0,0,0,0.3);
+
+    display: block;
+    margin: 0 auto;
+}
+
+/* RESPONSIVE*/
+
+@media (max-width: 1500px) {
+
+    #simulation-container {
+        width: 100%;
+    }
+
+    #trafficCanvas {
+        height: min(640px, 68vh);
+        width: auto;
+        max-width: 95vw;
+    }
+}
+
+@media (max-width: 900px) {
+
+    #dashboard {
+        flex-wrap: wrap;
+    }
+
+    .stat-card {
+        min-width: 140px;
+    }
+
+    .stat-card h3 {
+        font-size: 15px;
+    }
+
+    .stat-card p {
+        font-size: 26px;
+    }
+}

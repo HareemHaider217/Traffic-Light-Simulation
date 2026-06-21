@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Traffic Light Simulation</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="simulation-container"> 
+
+        <!-- Dashboard -->
+        <div id="dashboard">
+
+            <div class="stat-card">
+                <h3>Simulation Time</h3>
+                <p id="simulationTime">0s</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>North</h3>
+                <p id="northCount">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>East</h3>
+                <p id="eastCount">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>South</h3>
+                <p id="southCount">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>West</h3>
+                <p id="westCount">0</p>
+            </div>
+
+        </div>
+
+        <canvas
+            id="trafficCanvas"
+            width="1400"
+            height="922">
+        </canvas>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
